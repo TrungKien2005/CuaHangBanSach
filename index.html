@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cua Hang Sach Tri Thuc</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="image"/>
+</head>
+<body>
+    <!-- Phần đầu trang (header) -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="image/thumbnail/smalling.png" alt="Logo">
+            </div>
+
+            <!-- Thanh tìm kiếm -->
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button>Tìm kiếm</button>
+            </div>
+
+            <!-- Các biểu tượng chức năng -->
+            <div class="header-icons">
+                <a href="#">
+                    <img src="image/hethong/phone1.png" alt="Tra cứu đơn hàng">
+                    <span>Tra cứu đơn hàng</span>
+                </a>
+                <a href="#">
+                    <img src="image/hethong/giohang6.png" alt="Giỏ hàng">
+                    <span>Giỏ hàng (0)</span>
+                </a>
+                <a href="#">
+                    <img src="image/hethong/user1.png" alt="Tài khoản">
+                    <span>Tài khoản</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Phần dưới của đầu trang -->
+    <div class="header-bottom">
+        <div class="header-bottom-container">
+            <div class="menu">
+                <img src="image/hethong/list.png" alt="Phone">
+                <a href="#">DANH MỤC SÁCH</a>
+            </div>
+            <div class="menu">
+                <img src="image/hethong/book8.png" alt="Phone">
+                <a href="#">Sản phẩm đã xem</a>
+            </div>
+            <div class="menu">
+                <img src="image/hethong/truck2.png" alt="Phone">
+                <a href="#">Ship COD Toàn Quốc</a>
+            </div>
+            <div class="menu">
+                <img src="image/hethong/truck3.png" alt="Phone">
+                <a href="#">Free Ship Đơn Hàng Trên 300k</a>
+            </div>
+            <div class="phone-number">
+                <img src="image/hethong/phone2.png" alt="Phone">
+                <span>0111 222 333 / 0333 666 999</span>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_1.png" alt="Sản phẩm 1">
+        </div>
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_2.png" alt="Sản phẩm 2">
+        </div>
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_3.png" alt="Sản phẩm 3">
+        </div>
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_4.png" alt="Sản phẩm 3">
+        </div>
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_5.png" alt="Sản phẩm 3">
+        </div>
+        <div class="mySlides">
+            <img src="image/thumbnail/TRI THUC BOOK/slider_item_6.png" alt="Sản phẩm 3">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dấu chấm chỉ số -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Nút tiếp theo / trước
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Hiển thị slide hiện tại
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Tự động chuyển đổi slide sau 5 giây
+        setInterval(function () {
+            plusSlides(1);
+        }, 7000);
+    </script>
+    <div class="container">
+        
+    </div>
+    <div class="fixed-social1">
+        <a href="https://www.facebook.com/TriThucBook" target="_blank">
+            <img src="image/hethong/fb.png" width="40" height="40">
+        </a>
+        <a class="fixed-social2">
+            <img src="image/hethong/giohang1.png" width="40" height="40">
+        </a>
+    </div>
+</body>
+</html>

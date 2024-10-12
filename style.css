@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Định dạng cho phần đầu trang */
+.header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Định dạng logo */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Định dạng thanh tìm kiếm */
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #006600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.search-bar button:hover {
+    background-color: #004d00;
+}
+
+/* Định dạng phần chức năng: tra cứu đơn hàng, giỏ hàng, tài khoản */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header-icons a img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.header-icons a span {
+    display: block;
+}
+
+/* Định dạng phần dưới của header (thanh điều hướng nhỏ) */
+.header-bottom {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.header-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-bottom a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.header-bottom a:hover {
+    color: #006600;
+}
+
+/* Định dạng cho số điện thoại */
+.phone-number {
+    display: flex;
+    align-items: center;
+}
+
+.phone-number img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu img{
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 0px;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Style for navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fixed-social1{
+    position: fixed;
+    bottom: 150px;
+    right: 26px;
+    z-index: 999;
+}
+.fixed-social2{
+    position: fixed;
+    bottom: 100px;
+    right: 26px;
+    z-index: 999;
+}
