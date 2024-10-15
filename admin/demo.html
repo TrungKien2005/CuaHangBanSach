@@ -1,0 +1,318 @@
+<html>
+ <head>
+  <title>
+   Analytics Dashboard
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f4f7fc;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            position: fixed;
+            height: 100%;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px 20px;
+            color: #333;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover, .sidebar ul li.active {
+            background-color: #e9f0ff;
+            color: #b4bfcb;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .header .search-bar input {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header .user-info .name {
+            font-weight: 500;
+        }
+        .header .user-info .role {
+            font-size: 12px;
+            color: #888;
+        }
+        .dashboard-header {
+            margin: 20px 0;
+        }
+        .dashboard-header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .dashboard-header p {
+            color: #888;
+        }
+        .dashboard-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .dashboard-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dashboard-card .info {
+            text-align: right;
+        }
+        .dashboard-card .info h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .dashboard-card .info p {
+            margin: 0;
+            color: #888;
+        }
+        .dashboard-card.total-orders {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: #fff;
+        }
+        .dashboard-card.clients {
+            background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+            color: #fff;
+        }
+        .dashboard-card.followers {
+            background: linear-gradient(90deg, #00b09b 0%, #96c93d 100%);
+            color: #fff;
+        }
+        .reports {
+            display: flex;
+            justify-content: space-between;
+        }
+        .report {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 48%;
+        }
+        .report h2 {
+            font-size: 18px;
+            margin: 0 0 20px 0;
+        }
+        .report .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .report .tabs div {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .report .tabs .active {
+            background-color: #6c5ce7;
+            color: #fff;
+        }
+        .report .chart {
+            height: 200px;
+            background-color: #f4f7fc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <h2>
+    Architect
+   </h2>
+   <ul>
+    <li class="active">
+     <i class="fas fa-tachometer-alt">
+     </i>
+     Dashboard Example 1
+    </li>
+    <li>
+     <i class="fas fa-gem">
+     </i>
+     Elements
+    </li>
+    <li>
+     <i class="fas fa-cogs">
+     </i>
+     Components
+    </li>
+    <li>
+     <i class="fas fa-table">
+     </i>
+     Tables
+    </li>
+    <li>
+     <i class="fas fa-th-large">
+     </i>
+     Dashboard Boxes
+    </li>
+    <li>
+     <i class="fas fa-mouse-pointer">
+     </i>
+     Forms Controls
+    </li>
+    <li>
+     <i class="fas fa-columns">
+     </i>
+     Forms Layouts
+    </li>
+    <li>
+     <i class="fas fa-check-circle">
+     </i>
+     Forms Validation
+    </li>
+    <li>
+     <i class="fas fa-chart-bar">
+     </i>
+     ChartJS
+    </li>
+   </ul>
+  </div>
+  <div class="main-content">
+   <div class="header">
+    <div class="search-bar">
+     <input placeholder="Search..." type="text"/>
+     <i class="fas fa-search">
+     </i>
+    </div>
+    <div class="user-info">
+     <img alt="User profile picture" height="40" src="https://storage.googleapis.com/a1aa/image/zszIjmpPae1gSi8ecGk8vwfZ4OxrtNvtymdrb8pkQV3ATfbOB.jpg" width="40"/>
+     <div>
+      <div class="name">
+       Alina Mcloud
+      </div>
+      <div class="role">
+       VP People Manager
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="dashboard-header">
+    <h1>
+     Analytics Dashboard
+    </h1>
+    <p>
+     This is an example dashboard created using build-in elements and components.
+    </p>
+   </div>
+   <div class="dashboard-cards">
+    <div class="dashboard-card total-orders">
+     <div class="info">
+      <h3>
+       1896
+      </h3>
+      <p>
+       Total Orders
+      </p>
+     </div>
+    </div>
+    <div class="dashboard-card clients">
+     <div class="info">
+      <h3>
+       $ 568
+      </h3>
+      <p>
+       Clients
+      </p>
+     </div>
+    </div>
+    <div class="dashboard-card followers">
+     <div class="info">
+      <h3>
+       46%
+      </h3>
+      <p>
+       Followers
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="reports">
+    <div class="report">
+     <h2>
+      SALES REPORT
+     </h2>
+     <div class="tabs">
+      <div class="active">
+       Last
+      </div>
+      <div>
+       Current
+      </div>
+     </div>
+     <div class="chart">
+      <img alt="Bar chart showing sales report" height="200" src="https://storage.googleapis.com/a1aa/image/j2lHIAMdl672GFUJ8xeRYD61V5CrpyfBN9sxIqMAw4lkpfNnA.jpg" width="200"/>
+     </div>
+    </div>
+    <div class="report">
+     <h2>
+      BANDWIDTH REPORTS
+     </h2>
+     <div class="tabs">
+      <div class="active">
+       Tab 1
+      </div>
+      <div>
+       Tab 2
+      </div>
+     </div>
+     <div class="chart">
+      <img alt="Line chart showing bandwidth reports" height="200" src="https://storage.googleapis.com/a1aa/image/uYQympW4v85JFt567EyeFfSrMVqfWYkYACMC82uySG8FTfbOB.jpg" width="200"/>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
