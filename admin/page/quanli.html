@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin web</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+        <!-- <script src="js/myscript.js"></script> -->
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../quanli.css">
+
+    </head>
+<body>
+
+
+    <div class="sidebar">
+        <div class="logo">
+            <!-- <img alt="logoadmin" height="100" width="100" style="padding-top: 0;" src="images/smalling.png"> -->
+            <i class="fas fa-bars"></i>
+            <span>Admin</span>
+        </div>
+
+
+        <nav>
+        <ul class="menu">
+            <li><a href="../index.html"><i class="fa-solid fa-book-open-reader"></i>Bảng điều khiển</a></li>
+            <li><a href="#"><i class="fas fa-th-large"></i>Bảng điều khiển</a></li>
+            <li><a href="#"><i class="fas fa-edit"></i>Biểu mẫu</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar"></i>Biểu đồ</a></li>
+            <li><a href="#"><i class="fas fa-table"></i>Bảng</a></li>
+            <li class="active"><a href="#"><i class="fas fa-user"></i>Quản lí người dùng</a></li>
+        </ul>
+        </nav>
+    </div>
+
+
+    <div class="main-content">
+        <div class="header">
+            <div class="user" style="padding-left: 30px;">
+                <li>
+                    <a href="#"><h3><i class="fas fa-house"></i>Trang chủ</h3></a>
+                </li>
+            </div>
+            <div class="controls">
+                <div class="search-box">
+                    <input placeholder="Tìm kiếm..." type="text" autofocus="false"/>
+                    <i class="fas fa-search"></i> 
+                </div>
+                <li><i class="fas fa-bell"></i></li>
+                    <div class="user-profile">
+                        <img alt="User-profile-picture" class="avatar" height="40" src="https://i.pinimg.com/564x/8a/9d/6e/8a9d6e85a93b8b3a8002896da71882a3.jpg" width="40"/>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+            <h3> Danh sách người dùng</h3>
+        </div>
+                <div class="actions">
+                    <button class="green">
+                    <i class="fas fa-plus"></i> Thêm mới khách hàng</button><button class="yellow">
+                    <i class="fas fa-file-download"></i> Tải từ file</button><button class="blue">
+                        <i class="fas fa-copy"></i> Sao chép</button><button class="green">
+                        <i class="fas fa-print"></i> In dữ liệu</button><button class="blue">
+                    <i class="fas fa-file-excel"></i> Xuất Excel</button><button class="gray">
+                    <i class="fas fa-trash"></i> Xóa người dùng</button>
+                </div>
+        </div>
+        <div class="maintable">
+        <table class="tableuser" border="1" style="margin-left: 20px; margin-right: 20px;">
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td><h4>Tên người dùng</h4></td>
+                <td><h4>Địa chỉ</h4></td>
+                <td><h4>Email</h4></td>
+                <td><h4>Vai trò</h4></td>
+                <td><h4>Quyền</h4></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>   
+                <td>DCT123C4</td>
+                <td> Đại học Sài Gòn</td>
+                <td>dct123c4@sv.sgu.edu.com</td>
+                <td>Admin</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>
+</body>
+</html>
