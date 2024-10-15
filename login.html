@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel=" stylesheet" href="login.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html"><img src="./image/thumbnail/smalling.png" alt="khong co"></a>
+    </div>
+    <div class="container">
+        <div class="login-box">
+            <div class="form-wrapper">
+                <div class="login-form">
+                    
+                    <h2>Đăng nhập</h2>
+                    <form action="">
+                        <div class="user">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email"
+                            required>
+                        </div>
+                        <div class="mk"> <label for="password">Mật khẩu</label></div>
+                        <div class="password">
+                            <input type="password" id="password" placeholder="Mật khẩu"
+                            required >
+                            <img src="./image/hethong/eye.png" id="eyeicon" alt="khong co">
+                        </div>
+                        <div class="forgot"><button type="submit" class="slc">
+                            <a href="#">Quên mật khẩu ?</button></a>
+                        </div> 
+                        <button type="submit" class="btn">Đăng nhập</button>   
+                        <div class="register-link">
+                            <p>Không có tài khoản ? <button type="submit" class="slc"> <a 
+                            href="#">Đăng ký ngay</button></a></p>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicon.src = "image/hethong/eye-open.png"
+            }
+            else{
+                password.type = "password";
+                eyeicon.src = "image/hethong/eye.png"
+            }
+        }
+    </script>
+</body>
+</html>
