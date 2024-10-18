@@ -16,25 +16,25 @@
                 <div class="login-form">
                     
                     <h2>Đăng nhập</h2>
-                    <form action="">
+                    <form id="loginForm" action="">
                         <div class="user">
                             <label for="email">Email</label>
                             <input type="email" id="email" placeholder="Email"
-                            required>
+                            required id="email">
                         </div>
                         <div class="mk"> <label for="password">Mật khẩu</label></div>
                         <div class="password">
                             <input type="password" id="password" placeholder="Mật khẩu"
-                            required >
+                            required id="password">
                             <img src="./image/hethong/eye.png" id="eyeicon" alt="khong co">
                         </div>
-                        <div class="forgot"><button type="submit" class="slc">
+                        <div class="forgot"><button type="button" class="slc">
                             <a href="#">Quên mật khẩu ?</button></a>
                         </div> 
                         <button type="submit" class="btn">Đăng nhập</button>   
                         <div class="register-link">
-                            <p>Không có tài khoản ? <button type="submit" class="slc"> <a 
-                            href="#">Đăng ký ngay</button></a></p>
+                            <p>Không có tài khoản ? <button type="button" class="slc"> <a 
+                            href="register.html">Đăng ký ngay</button></a></p>
                         </div>
                         
                     </form>
@@ -43,19 +43,6 @@
 
         </div>
     </div>
-    <script>
-        let eyeicon = document.getElementById("eyeicon");
-        let password = document.getElementById("password");
-        eyeicon.onclick = function(){
-            if(password.type == "password"){
-                password.type = "text";
-                eyeicon.src = "image/hethong/eye-open.png"
-            }
-            else{
-                password.type = "password";
-                eyeicon.src = "image/hethong/eye.png"
-            }
-        }
-    </script>
+    <script src="login.js"></script>
 </body>
 </html>
